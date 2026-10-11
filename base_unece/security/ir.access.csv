@@ -1,0 +1,5 @@
+id,name,model_id,group_id/id,operation,domain
+access_unece_code_list_user_read,Read access on unece.code.list to employees,unece.code.list,base.group_user,r,
+access_unece_code_list_public_read,Read access on unece.code.list to public,unece.code.list,base.group_public,r,
+access_unece_code_list_portal_read,Read access on unece.code.list to portal,unece.code.list,base.group_portal,r,
+access_unece_code_list_full,Full access on unece.code.list to Settings group,unece.code.list,base.group_system,crud,
