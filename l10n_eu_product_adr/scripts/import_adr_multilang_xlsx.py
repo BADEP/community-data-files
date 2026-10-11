@@ -156,8 +156,7 @@ def parse_packing_instructions(row):
                 continue
             part = last_code + part
         res.append(part)
-    res = [part.replace("(", "").replace(")", "") for part in res]
-    return res
+    return [part.replace("(", "").replace(")", "") for part in res]
 
 
 def parse_limited_quantity(row, split=True):
@@ -175,8 +174,7 @@ def parse_limited_quantity(row, split=True):
     if not match:
         if "BP 251" in value:  # known case
             return False, False
-        else:
-            raise ValueError(f"Cannot parse limited quantity: {value} ({row})")
+        raise ValueError(f"Cannot parse limited quantity: {value} ({row})")
     quantity, uom_name = match.groups()
     if uom_name.lower() not in uom_map:
         raise ValueError(f"Unknown uom {uom_name} in limited quantity {value} ({row})")

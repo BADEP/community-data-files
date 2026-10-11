@@ -7,6 +7,8 @@ from odoo.addons.stock.tests.common import TestStockCommon
 
 @tagged("post_install", "-at_install")
 class TestAdrPoints(TestStockCommon):
+    _test_user_groups = None
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
